@@ -5,11 +5,13 @@ import { RootState, AppDispatch } from '../store';
 import { fetchMovieById, clearCurrentMovie } from '../store/slices/moviesSlice';
 import { Star, Calendar, ArrowLeft, Clock, Tag } from 'lucide-react';
 
+
 const MovieDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   const { currentMovie, loading, error } = useSelector((state: RootState) => state.movies);
+  const { user } = useSelector((state: RootState) => state.auth);
 
   useEffect(() => {
     if (id) {
@@ -22,7 +24,7 @@ const MovieDetails: React.FC = () => {
   }, [id, dispatch]);
 
   const handleGoBack = () => {
-    navigate('/movies');
+    user?.role !== 'admin' ? navigate('/movies') : navigate(-1)
   };
 
   if (loading) {

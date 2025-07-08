@@ -1,6 +1,32 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { AuthState, User } from '../../types';
 
+// Helper functions for localStorage
+const saveUserToStorage = (user: User) => {
+  try {
+    localStorage.setItem('happyMovie_user', JSON.stringify(user));
+  } catch (error) {
+    console.error('Failed to save user to localStorage:', error);
+  }
+};
+
+const getUserFromStorage = (): User | null => {
+  try {
+    const stored = localStorage.getItem('happyMovie_user');
+    return stored ? JSON.parse(stored) : null;
+  } catch (error) {
+    console.error('Failed to get user from localStorage:', error);
+    return null;
+  }
+};
+
+const removeUserFromStorage = () => {
+  try {
+    localStorage.removeItem('happyMovie_user');
+  } catch (error) {
+    console.error('Failed to remove user from localStorage:', error);
+  }
+};
 export const loginUser = createAsyncThunk(
   'auth/login',
   async ({ email, password }: { email: string; password: string }, { rejectWithValue }) => {
@@ -26,9 +52,11 @@ export const loginUser = createAsyncThunk(
   }
 );
 
+// Initialize state from localStorage
+const storedUser = getUserFromStorage();
 const initialState: AuthState = {
-  user: null,
-  isLoggedIn: false,
+  user: storedUser,
+  isLoggedIn: !!storedUser,
   loading: false,
   error: null,
 };
@@ -41,6 +69,7 @@ const authSlice = createSlice({
       state.user = null;
       state.isLoggedIn = false;
       state.error = null;
+      removeUserFromStorage();
     },
     clearError: (state) => {
       state.error = null;
@@ -57,6 +86,7 @@ const authSlice = createSlice({
         state.user = action.payload;
         state.isLoggedIn = true;
         state.error = null;
+        saveUserToStorage(action.payload);
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;
