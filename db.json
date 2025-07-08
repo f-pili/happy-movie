@@ -1,0 +1,58 @@
+{
+  "movies": [
+    {
+      "id": "5b84",
+      "title": "The Shawshank Redemption",
+      "description": "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
+      "year": 1994,
+      "rating": 9.5,
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNjQ2NDA3MDcxMF5BMl5BanBnXkFtZTgwMjE5NTU0NzE@._V1_.jpg",
+      "genre": "Drama"
+    },
+    {
+      "id": "4988",
+      "title": "The Godfather",
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "year": 1972,
+      "rating": 9.5,
+      "imageUrl": "https://media.newyorker.com/photos/594044d90c240c2a1fd678ce/3:2/w_2559,h_1706,c_limit/970324_ra409.jpg",
+      "genre": "Crime"
+    },
+    {
+      "id": "b670",
+      "title": "The Dark Knight",
+      "description": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
+      "year": 2008,
+      "rating": 9,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/it/thumb/3/3d/The_Dark_Knight_-_Trailer_3.jpg/960px-The_Dark_Knight_-_Trailer_3.jpg",
+      "genre": "Action"
+    },
+    {
+      "id": "72bd",
+      "title": "The Godfather Part II",
+      "description": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+      "year": 1974,
+      "rating": 9,
+      "imageUrl": "https://m.media-amazon.com/images/S/pv-target-images/eb622d67a640e196c48fde4473937c9260c39722e756d8f51e22253ed6dc0072._SX1080_FMjpg_.jpg",
+      "genre": ""
+    },
+    {
+      "id": "68bc",
+      "title": "12 Angry Men",
+      "description": "The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.",
+      "year": 1957,
+      "rating": 9,
+      "imageUrl": "https://www.casadelcinema.it/wp-content/uploads/2024/04/La-parola-ai-giurati-1130x650.jpg",
+      "genre": "Drama"
+    },
+    {
+      "id": "a34f",
+      "title": "The Lord of the Rings: The Return of the King",
+      "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+      "year": 2003,
+      "rating": 9,
+      "imageUrl": "https://images.savoysystems.co.uk/MCB/751786.jpg",
+      "genre": "Fantasy"
+    }
+  ]
+}
