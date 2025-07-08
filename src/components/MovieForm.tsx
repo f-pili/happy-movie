@@ -265,7 +265,7 @@ const MovieForm: React.FC<MovieFormProps> = ({ movie, onClose, onSuccess }) => {
                 className="flex-1 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 px-4 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
                 <Save className="w-5 h-5" />
-                <span>{loading ? 'Saving...' : movie ? 'Update Movie' : 'Add Movie'}</span>
+                <span>{loading ? 'Saving...' : movie ? 'Update' : 'Add new'}</span>
               </button>
               <button
                 type="button"
