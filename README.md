@@ -1,6 +1,6 @@
 # Happy Movie 🎬
 
-A modern, production-ready movie catalog application built with React, Redux Toolkit, and TypeScript. Happy Movie provides an intuitive interface for browsing, managing, and discovering movies with advanced features like authentication, admin dashboard, and responsive design.
+A modern movie catalog application built with React, Redux Toolkit, and TypeScript. Happy Movie provides an intuitive interface for browsing, managing, and discovering movies with advanced features like authentication, admin dashboard, and responsive design.
 
 ## ✨ Features
 
