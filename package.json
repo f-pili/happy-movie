@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "dev:full": "concurrently \"npm run db\" \"npm run dev\"",
+    "dev": "concurrently \"npm run db\" \"npm run vite\"",
+    "vite": "vite",
     "db": "json-server --watch db.json --port 3001",
     "build": "vite build",
     "lint": "eslint .",
