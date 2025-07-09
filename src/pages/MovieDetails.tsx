@@ -68,7 +68,7 @@ const MovieDetails: React.FC = () => {
           className="flex items-center space-x-2 mb-8 text-gray-300 hover:text-yellow-400 transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
-          <span>Back to movies</span>
+          <span>Go back</span>
         </button>
 
         {/* Movie Details */}
