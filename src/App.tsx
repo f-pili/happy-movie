@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
@@ -11,6 +10,7 @@ import MovieDetails from './pages/MovieDetails';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -31,8 +31,9 @@ function App() {
                   <PrivateRoute adminOnly>
                     <AdminDashboard />
                   </PrivateRoute>
-                } 
+                }
               />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
