@@ -1,8 +1,12 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Home, Search, ArrowLeft } from 'lucide-react';
 
 const NotFound: React.FC = () => {
+
+const location = useLocation()
+
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center">
       <div className="container mx-auto px-4 py-12">
@@ -20,7 +24,7 @@ const NotFound: React.FC = () => {
             Oops! Page not found
           </h1>
           <p className="text-gray-300 text-lg mb-8 max-w-md mx-auto">
-            The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.
+            The path {location.pathname} doesn't exist. It might have been moved, deleted, or you entered the wrong URL.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
