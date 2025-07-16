@@ -80,6 +80,7 @@ Before you begin, ensure you have the following installed:
    npm run dev
    ```
    This starts the React application on `http://localhost:5173`
+   ... and a mock API server on `http://localhost:3001`
 
 ### Project Structure
 
