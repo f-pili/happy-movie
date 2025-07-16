@@ -75,17 +75,11 @@ Before you begin, ensure you have the following installed:
    ```
    This starts the mock API server on `http://localhost:3001`
 
-2. **Start the Development Server**
+2. **Start Both Servers Simultaneously**
    ```bash
    npm run dev
    ```
    This starts the React application on `http://localhost:5173`
-
-3. **Start Both Servers Simultaneously**
-   ```bash
-   npm run dev:full
-   ```
-   This command runs both the JSON server and React dev server concurrently
 
 ### Project Structure
 
@@ -177,8 +171,7 @@ const newMovie = await moviesApi.addMovie(movieData);
 
 | Script | Description |
 |--------|-------------|
-| `npm run dev` | Start development server (React only) |
-| `npm run dev:full` | Start both React and JSON server |
+| `npm run dev` | Start both React and JSON server |
 | `npm run db` | Start JSON server only |
 | `npm run build` | Build for production |
 | `npm run preview` | Preview production build |
